@@ -1,0 +1,26 @@
+// I'll have 2 codes here, the first one I was able to get up and running, but the second one I simply can't...I guess it's due to some syntax error
+// but they're supposed to pretty much do the same thing.
+
+function mutate (inputArray) {
+	var outputArray = inputArray.map(item => item.toUpperCase());
+	return outputArray;
+}
+const mutated = mutate(['dog', 'ray gun', 'cat']);
+console.log('Mutated Items');
+console.log(mutated); // should be ['DOG', 'CAT', 'ZIPPERS']
+
+// Code 1
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+function mutate (inputArray) {
+	var outputArray = inputArray.forEach(function(item, index, array) {
+		item.toUpperCase();
+	});
+return outputArray;
+}
+const mutated = mutate(['dog', 'ray gun', 'cat']);
+console.log('Mutated Items');
+console.log(mutated); // should be ['DOG', 'CAT', 'ZIPPERS']
+
+//Code 2
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
